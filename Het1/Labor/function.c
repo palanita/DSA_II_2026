@@ -3,12 +3,11 @@
 //
 #include "function.h"
 
-#include <stdio.h>
 
 void readElementsRecursive(int *v, int n) {
     if (n>=0) {
         readElementsRecursive(v,n-1);
-        printf("Kerek egy elemet:");
+        printf("Irj egy elemet:");
         scanf("%i", &v[n]);
     }
 }
@@ -32,12 +31,11 @@ int minElementRecursive(int *v, int n) {
         int a = minElementRecursive(v, n-1);
         if (a<v[n]){
             return a;
-        }else
-            return v[n];
+        }
+        return v[n];
     }
-    return 0;
+    return v[0];
 }
-
 
 int countPositiveElementsRecursive(int *v, int n) {
     if (n>=0) {
@@ -49,13 +47,39 @@ int countPositiveElementsRecursive(int *v, int n) {
     return 0;
 }
 
+int prodDigitsNumber(int e) {
+    if (e>=10) {
+        return e%10*prodDigitsNumber(e/10);
+    }
+    return e;
+}
+
+int minDigitNumber(int e) {
+    if (e>=10) {
+        return e%10 < minDigitNumber(e/10) ? e%10 : minDigitNumber(e/10);
+    }
+    return e;
+}
+
 void readMatrixRecursive(int **matrix, int rows, int cols, int currentRow, int currentCol) {
     if (currentRow<rows) {
         if (currentCol<cols) {
             scanf("%i", &matrix[currentRow][currentCol]);
             readMatrixRecursive(matrix, rows, cols, currentRow,currentCol+1);
-        }
+        } else
         readMatrixRecursive(matrix,rows,cols, currentRow+1, 0);
+    }
+}
+
+void printMatrixRecursive(int **matrix, int rows, int cols, int currentRow, int currentCol) {
+    if (currentRow<rows) {
+        if (currentCol<cols) {
+            printf("%i ", matrix[currentRow][currentCol]);
+            printMatrixRecursive(matrix, rows, cols, currentRow,currentCol+1);
+        } else{
+			printf("\n");
+        	printMatrixRecursive(matrix,rows,cols, currentRow+1, 0);
+		}
     }
 }
 

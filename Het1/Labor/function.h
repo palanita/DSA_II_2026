@@ -4,6 +4,8 @@
 
 #ifndef LABOR_FUNCTION_H
 #define LABOR_FUNCTION_H
+#include <stdio.h>
+#include <stdlib.h>
 
 // 1.Tömb elemeinek beolvasása rekurzívan
 void readElementsRecursive(int *v, int n);
@@ -40,7 +42,6 @@ int maxMatrixElementsRecursive(int **matrix, int rows, int cols, int currentRow,
 // 17.Mátrix elemeinek minimális értéke rekurzívan
 int minMatrixElementsRecursive(int **matrix, int rows, int cols, int currentRow, int currentCol);
 //18.Mátrixban található pozitív elemek száma rekurzívan
-int countPositiveMatrixElementsRecursive(int **matrix, int rows, int cols, int currentRow, int
-currentCol);
+int countPositiveMatrixElementsRecursive(int **matrix, int rows, int cols, int currentRow, int currentCol);
 
 #endif //LABOR_FUNCTION_H
