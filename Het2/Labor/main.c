@@ -12,7 +12,7 @@ int main(void) {
 
     koPapirOllo(a, n-1);
     kiir(a, n-1);
-    printf("%d szamu tag nyert", bajnoksag(a, 0, n-1)+1);
+    printf("[%d] szamu tag nyert", bajnoksag(a, 0, n-1)+1);
 
     free(a);
     return 0;
