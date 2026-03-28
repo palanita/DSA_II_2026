@@ -26,7 +26,7 @@ void BTP (int *x, int n, int k) {
         if (valid(x,n,k)) {
             if (k<n-1) {
                 BTP(x,n,k+1);
-            }
+     }
             else  kiir(x,n,k);
         }
     }
