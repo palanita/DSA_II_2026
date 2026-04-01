@@ -18,7 +18,7 @@ bool valid(int *x, int n, int k, Utas *utasok) {
     for (int i = 0; i < k; i++) {
         if (x[k] == x[i]) return false;
     }
-
+    //ha fiatal
     if (!utasok[x[k] - 1].idos) {
         // ellenőrizzük, van-e a Teljes Utaslistában olyan idős,
         // aki még nincs benne az eddigi sorrendben

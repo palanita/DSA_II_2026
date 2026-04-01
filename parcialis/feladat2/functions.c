@@ -19,7 +19,9 @@ bool valid(int *x, int k, Hozzavalo *hozzavalok) {
     for (int i = 0; i < k; i++) {
         if (x[k] == x[i]) return false;
     }
+    //az első ciklust kihagyva
     if (k>0) {
+        //ha
         if (hozzavalok[x[k-1]-1]==eleszto && hozzavalok[x[k]-1]==so) return false;
         if (hozzavalok[x[k-1]-1]==so && hozzavalok[x[k]-1]==eleszto) return false;
     }

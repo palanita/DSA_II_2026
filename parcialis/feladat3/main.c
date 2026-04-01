@@ -5,7 +5,7 @@
 /*
  * Milyen sorrendekben ülhetnek fel a fiatalok
  * és az idősök a buszra, úgy, hogy az idősök előbb száljanak fel,
- * mint bármelyik fiatal.
+ * mint bármelyik fiatal. (permutáció)
  */
 int main(void) {
     Utas utasok[]={

@@ -73,13 +73,7 @@ void kiir_erdo(int a[][50], int n, int m) {
     printf("\nBeolvasott erdo (%dx%d):\n", n, m);
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
-            if (a[i][j] == FAL) {
-                printf("1 ");
-            } else if (a[i][j] == BOT){
-                printf("2 ");
-            } else {
-                printf("0 ");
-            }
+            printf("%d ", a[i][j]);
         }
         printf("\n");
     }

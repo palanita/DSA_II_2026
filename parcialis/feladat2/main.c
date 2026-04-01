@@ -5,7 +5,7 @@
 
 /* Milyen sorrendben tehetjük össze a süti hozzávalókat,
  * hogy a közvetlenül az élesztő előtt és után ne
- * adjunk hozzá a sót?
+ * adjunk hozzá a sót? (permutáció)
  */
 int main(void) {
     Hozzavalo hozzavalok[]={cukor, liszt, eleszto, so, tej};

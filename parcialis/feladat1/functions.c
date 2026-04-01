@@ -21,14 +21,15 @@ bool valid(int *x, int n, int k, Tancos *csoport) {
         //csak fiú-lány pár feltétel
         if (csoport[x[k]-1].nem == csoport[x[i]-1].nem) return false;
         //magasság feltétel
-        if (csoport[x[k]-1].nem != csoport[x[i]-1].nem) {
-            if (csoport[x[k]-1].nem == lany &&
-                csoport[x[k]-1].magassag > csoport[x[i]-1].magassag)
-                return false;
-            if (csoport[x[k]-1].nem == fiu &&
-                csoport[x[k]-1].magassag < csoport[x[i]-1].magassag)
-                return false;
-        }
+        //if (csoport[x[k]-1].nem != csoport[x[i]-1].nem)
+        //ha lány és nála kisebb
+        if (csoport[x[k]-1].nem == lany &&
+            csoport[x[k]-1].magassag > csoport[x[i]-1].magassag)
+            return false;
+            //ha fiú és nála magasabb
+        if (csoport[x[k]-1].nem == fiu &&
+            csoport[x[k]-1].magassag < csoport[x[i]-1].magassag)
+            return false;
     }
     return true;
 }
