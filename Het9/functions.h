@@ -7,14 +7,15 @@
 
 //1. feladat
 int binarySearchRecursive(int arr[], int left, int right, int target);
+
 //2. feladat
-void backtrack(int** x, int n,char** matrix);
+void backtrack(int **x, int n, int k, char **matrix);
 
-inline bool valid(int **x, int n, char **matrix) {
-    for (int i=0; i<n; i++) {
-    }
-}
+bool valid(int **x, int n, int k, char **matrix);
 
-void kiir(int** x, int n,char** matrix);
+void kiir(int **x, int n, int k, char **matrix);
+
+//3. feladat
+
 
 #endif //HET9_FUNCTIONS_H
