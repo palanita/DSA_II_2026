@@ -16,9 +16,9 @@ int binarySearchRecursive(int arr[], int left, int right, int target) {
 }
 
 bool valid(int **x, int n, int k, char **matrix) {
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < k; i++) {
         for (int j = 0; j < n; j++) {
-            if ('*' == matrix[i][j]) {
+            if (matrix[i][j]=='*') {
             }
         }
     }

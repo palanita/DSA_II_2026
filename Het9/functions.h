@@ -18,4 +18,5 @@ void kiir(int **x, int n, int k, char **matrix);
 //3. feladat
 
 
+
 #endif //HET9_FUNCTIONS_H

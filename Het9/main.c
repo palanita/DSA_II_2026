@@ -32,5 +32,7 @@ int main(void) {
         free(x[i]);
     }
     free(x);
+
+    //3.feladat
     return 0;
 }
