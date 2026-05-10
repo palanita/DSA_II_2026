@@ -1,0 +1,13 @@
+_Mozi nap_
+Szeretnénk egy egész napos mozizást tartani és a lehető legtöbb filmet szeretnénk megnézni.
+Ennek segítségére lesz az algoritmus, ami egy adott moziműsorból
+kiválasztja a lehető legtöbb megtekinthető filmet. Egy időben csak egy filmet nézhetünk,
+és a filmeket csak az elejétől a végéig tartó megtekintéssel fogadjuk el.
+
+A probléma megoldásához a mohó algoritmust alkalmazzuk. A választási kritérium a befejezési időpont.
+
+Lépések:
+1. A filmek listáját növekvő sorrendbe rendezzük a befejezési időpontjuk (end) alapján.
+2. Kiválasztjuk az első (legkorábban végződő) filmet.
+3. Végighaladunk a maradék listán, és minden olyan filmet kiválasztunk,
+   amelynek a kezdési időpontja nem korábbi, mint az utoljára választott film befejezési időpontja.
