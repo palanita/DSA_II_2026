@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include "functions.h"
 
+//Torony
+
 int main(void) {
     Beosztas beosztasok[]={{6,10},
     {1,7},
     {3,9},
     {8,13},
-        {5,7},
+    {5,7},
     };
 
     int n=sizeof(beosztasok)/sizeof(beosztasok[0]);

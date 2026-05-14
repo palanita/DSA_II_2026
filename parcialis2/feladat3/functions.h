@@ -8,8 +8,8 @@
 #include <stdlib.h>
 
     typedef struct {
-        int start;  // Kezdési idő (pl. 10 óra)
-        int end;    // Befejezési idő (pl. 12 óra)
+        int start;  // Kezdési nap (pl. 5. naptól)
+        int end;    // Befejezési nap
     } Beosztas;
 
 int katonaIgenyles(Beosztas beosztasok[], int n);
