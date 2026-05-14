@@ -4,6 +4,7 @@
 
 int main(void) {
     //1.feladat
+    printf("\n1. feladat\n");
     FILE* input=fopen("tomb.txt","r");
     if (input == NULL) {
         printf("Error opening file");
@@ -20,19 +21,32 @@ int main(void) {
     free(arr);
 
     //2.feladat
-    int**x=calloc(n,sizeof(int**));
-    for(int i=0;i<n;i++) {
-        x[i]=calloc(n,sizeof(int*));
-    }
-    if(x==NULL) {
-        printf("Memory allocation failed");
+    printf("\n2. feladat\n");
+    printf("\nn = ");
+    scanf("%d", &n);
+
+    // Dinamikus memóriafoglalás a mátrixnak
+    char **matrix = (char **)malloc(n * sizeof(char *));
+    for (int i = 0; i < n; i++) {
+        matrix[i] = (char *)malloc(n * sizeof(char));
+        for (int j = 0; j < n; j++) {
+            matrix[i][j] = '+'; // Alapértelmezésben minden elem '+'
+        }
     }
 
-    for(int i=0;i<n;i++) {
-        free(x[i]);
+    int **x = (int **)malloc(n * sizeof(int *));
+
+    backtrack(x, n, 0, matrix);
+
+    // Memória felszabadítása
+    for (int i = 0; i < n; i++) {
+        free(matrix[i]);
     }
+    free(matrix);
     free(x);
 
     //3.feladat
+    printf("\n3. feladat\n");
+    solve();
     return 0;
 }
